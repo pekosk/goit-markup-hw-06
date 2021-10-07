@@ -1033,7 +1033,7 @@ p:last-child {
   color: var(--secondary-text-color);
 
   display: flex;
-
+  align-items: center;
   text-align: center;
   font-size: 14px;
   line-height: 1.7;
@@ -1053,11 +1053,16 @@ p:last-child {
   width: 16px;
   height: 15px;
   margin-right: 8px;
+  transition-property: border-color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-check:checked + .checkbox-label::before {
+  border-color: transparent;
   background-color: var(--accent-colour);
   background-image: url(../images/bg-images/check-icon.svg);
+  background-repeat: no-repeat;
 }
 
 .checkbox-icon {
